@@ -46,19 +46,20 @@ Methods follow the previous work listed below.
    - player, position, avg $/year
    
 #### Python Packages
+*Install these packages in your Python environment to run the [notebooks](/#Notebook-Descriptions)*
   - [pandas](https://pandas.pydata.org/)
   - [numpy](https://numpy.org/)
   - [scipy](https://scipy.org/)
   - [statsmodels](https://www.statsmodels.org/)
   - [matplotlib](https://matplotlib.org/)
   - [seaborn](https://seaborn.pydata.org/)
-*Install these packages in your Python environment to run the [notebooks](/#Notebook-Descriptions)*
+
 
 ----
  
 ## Draft Surplus Analysis
 
-**Use expected performance vs draft pick AND to compare market and rookie costs for a number of positions/groups.**
+**Use expected performance vs draft pick to compare market and rookie costs for a number of positions/groups.**
 
  > Every NFL draft pick has an assigned rookie contract value, or cost to the NFL that drafts him. Surplus value is the difference between the assigned contract cost and an estimate of what it would cost an NFL team to acquire or retain a similarly productive player in free agency or via contract extension. In a hard cap league, all players have to be valued against the cost of their services, and rookie salary schedules typically undervalue the likely productivity of drafted players, creating value for the teams that draft them.
 
