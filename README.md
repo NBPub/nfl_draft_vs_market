@@ -3,7 +3,9 @@
 NFL position-specific performance, market rate, and draft value from 2011 to 2023, collected and analyzed using Python. 
 This repository demonstrates data import, cleaning, and analysis via Jupyter Notebooks.
 
-| [Credit](#Previous-Work) | [Output](/#Position-Comparisons) | [Methods](/#Notebook-Descriptions) |
+| [Credit](#Previous-Work) | [Methods](/#Draft-Surplus-Analysis) | [Output](/#Position-Comparisons) | [Notebooks](/#Notebook-Descriptions) |
+
+----
 
 ### Contents
  - [Acknowledgements](/#Acknowledgements)
@@ -30,8 +32,9 @@ Methods follow the previous work listed below.
   - make list
    
 ### Previous Work
-  - [The Loser's Curse - Massey, Thaler - 2013](https://faculty.wharton.upenn.edu/wp-content/uploads/2013/08/massey---thaler---losers-curse---management-science-july-2013.pdf), [DOI](http://dx.doi.org/10.1287/mnsc.1120.1657)
-    - paper analyzing decision making during NFL draft. realting overvaluation of top picks with pyschological research.
+*note differences in on-field **performance** measurement*
+  - [The Loser's Curse - Massey, Thaler, 2013](https://faculty.wharton.upenn.edu/wp-content/uploads/2013/08/massey---thaler---losers-curse---management-science-july-2013.pdf) | [DOI](http://dx.doi.org/10.1287/mnsc.1120.1657)
+    - paper analyzing decision making during NFL draft. relates overvaluation of top picks with pyschological research.
   - [The making and comparison of draft curves - statsbylopez, 2016](https://statsbylopez.com/2016/06/22/the-making-and-comparison-of-draft-curves/)
     - performance (games played) vs pick determined for various professional sports
   - [Rethinking draft curves - statsbylopez, 2018](https://statsbylopez.netlify.app/post/rethinking-draft-curve/)
@@ -44,10 +47,12 @@ Methods follow the previous work listed below.
   - Draft Trade Charts
     - [Over The Cap](https://overthecap.com/draft-trade-value-chart)
 	- ["Jimmy Johnson Chart" via PFR](https://www.pro-football-reference.com/draft/draft_trade_value.htm)
+
+----
  
 ## Draft Surplus Analysis
 
-**Use expected performance vs draft pick to compare market and rookie costs for a number of positions/groups.**
+**Use expected performance vs draft pick AND to compare market and rookie costs for a number of positions/groups.**
 
  > Every NFL draft pick has an assigned rookie contract value, or cost to the NFL that drafts him. Surplus value is the difference between the assigned contract cost and an estimate of what it would cost an NFL team to acquire or retain a similarly productive player in free agency or via contract extension. In a hard cap league, all players have to be valued against the cost of their services, and rookie salary schedules typically undervalue the likely productivity of drafted players, creating value for the teams that draft them.
 
@@ -55,9 +60,9 @@ Methods follow the previous work listed below.
 
 <details><summary>Methods</summary>
 
-  - Data | *[Data](/data)*
+  - Data | *[processed data](/data)*
     - **Performance** measured by PFR's AV divided by games played. `AVpG`
-      - only available from sourced data: players drafted from 2011-2023
+      - only available from sourced draft data: players drafted from 2011-2023
     - **Costs** measured by percent salary cap. `% Cap`
       - rookie cost vs draft pick from Spotrac
 	  - veteran cost from OTC, *average per year in 2023 / salary cap 2023*
@@ -80,10 +85,10 @@ Methods follow the previous work listed below.
 	- **Draft Performance Surplus**: same as above, with additional performance factor.
 	  - *market premium* already captures expected performance, multiplying further by `AV percentile` causes steeper decline in surplus curves
 	  - may provide better meaning to *union picks*
-  - Limitations | *[Position Group Checks](/comparison%20graphs/position%20group%20checks)*
+  - Limitations
     - Dropped players
 	  - Performance, `AVpG`, was sourced from the PFR draft data. Undrafted players, players drafted prior to 2011, and players with inconsistent positions from the OTC market data were dropped.
-    - Position labels
+    - Position labels | *[Position Group Checks](/comparison%20graphs/position%20group%20checks)*
 	  - PFR position labels are broader and less consistent than OTC. Some cleaning efforts and groupings were employed. Others were skipped.
 	    - OTC positions used to classify "OL" from PFR. Not all "OL" were found, resulting in more dropped players for iOL and OT analysis.
 		- To ignore "DB" from PFR, all CB and S were grouped. Is it fair to group these market rates?
@@ -102,7 +107,6 @@ Methods follow the previous work listed below.
 	  - draft performance fits weighed by missed picks (`AVpG=0`), top picks performance may be undervalued
 	  - significant data points may be missing from market rate fits, see dropped players
 	    - number of "top contracts" quickly selected
-
 </details>
  
 ### Position Comparisons
@@ -131,6 +135,7 @@ Methods follow the previous work listed below.
 
 </details>
 
+----
  
 ## Notebook Descriptions
  - [Import](/Data%20Import.ipynb) | *[description](/#Import)*
