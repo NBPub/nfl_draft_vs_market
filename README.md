@@ -18,19 +18,6 @@ This repository demonstrates data import, cleaning, and analysis via Jupyter Not
 Three websites were used to source data. 
 Methods follow the previous work listed below.
 
-### Data Sources
- - **Pro-Football-Reference** (PFR)
-   - Draft [data](https://www.pro-football-reference.com/years/2023/draft.htm) from 2011-2023, with *[approximate value](https://www.pro-football-reference.com/about/approximate_value.htm)* (AV) metric
-   - player, position, pick, AV, games played
- - **Spotrac**
-   - [Salary cap](https://www.spotrac.com/nfl/cba/) and [draft salary](https://www.spotrac.com/nfl/draft/2023/) history from 2020-2023
- - **Over The Cap** (OTC)
-   - 2023 [contracts](https://overthecap.com/contracts)
-   - player, position, avg $/year
-   
-#### Python Packages
-  - make list
-   
 ### Previous Work
 *note differences in on-field **performance** measurement*
   - [The Loser's Curse - Massey, Thaler, 2013](https://faculty.wharton.upenn.edu/wp-content/uploads/2013/08/massey---thaler---losers-curse---management-science-july-2013.pdf) | [DOI](http://dx.doi.org/10.1287/mnsc.1120.1657)
@@ -47,6 +34,25 @@ Methods follow the previous work listed below.
   - Draft Trade Charts
     - [Over The Cap](https://overthecap.com/draft-trade-value-chart)
 	- ["Jimmy Johnson Chart" via PFR](https://www.pro-football-reference.com/draft/draft_trade_value.htm)
+
+### Data Sources
+ - **Pro-Football-Reference** (PFR)
+   - Draft [data](https://www.pro-football-reference.com/years/2023/draft.htm) from 2011-2023, with *[approximate value](https://www.pro-football-reference.com/about/approximate_value.htm)* (AV) metric
+   - player, position, pick, AV, games played
+ - **Spotrac**
+   - [Salary cap](https://www.spotrac.com/nfl/cba/) and [draft salary](https://www.spotrac.com/nfl/draft/2023/) history from 2020-2023
+ - **Over The Cap** (OTC)
+   - 2023 [contracts](https://overthecap.com/contracts)
+   - player, position, avg $/year
+   
+#### Python Packages
+  - [pandas](https://pandas.pydata.org/)
+  - [numpy](https://numpy.org/)
+  - [scipy](https://scipy.org/)
+  - [statsmodels](https://www.statsmodels.org/)
+  - [matplotlib](https://matplotlib.org/)
+  - [seaborn](https://seaborn.pydata.org/)
+*Install these packages in your Python environment to run the [notebooks](/#Notebook-Descriptions)*
 
 ----
  
