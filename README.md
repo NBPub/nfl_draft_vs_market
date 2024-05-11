@@ -96,6 +96,7 @@ Methods follow the previous work listed below.
     - Dropped players
 	  - Performance, `AVpG`, was sourced from the PFR draft data. Undrafted players, players drafted prior to 2011, and players with inconsistent positions from the OTC market data were dropped.
     - Position labels | *[Position Group Checks](/comparison%20graphs/position%20group%20checks)*
+	  - *update* **addressed issue [here](/market%20based%20position%20groups/market%20based%20positions.ipynb), see [README](/market%20based%20position%20groups) for details**
 	  - PFR position labels are broader and less consistent than OTC. Some cleaning efforts and groupings were employed. Others were skipped.
 	    - OTC positions used to classify "OL" from PFR. Not all "OL" were found, resulting in more dropped players for iOL and OT analysis.
 		- To ignore "DB" from PFR, all CB and S were grouped. Is it fair to group these market rates?

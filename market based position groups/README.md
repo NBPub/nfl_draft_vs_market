@@ -33,9 +33,9 @@
      - compared to polynomial fits and smoothed spline interpolations. fit seemed ok and simple linear relationship more useful than minimizing error.
    - [graphs](./graphs) and [tables](./tables) generated
  
-#### Notebook
-
- - to be uploaded 
+#### [Notebook](./market%20based%20positions.ipynb)
+ - code copied over, should work but not checked
+ - detailed process, at least one example for graphs and fits
  
  
 ### Market Fit Tables 
