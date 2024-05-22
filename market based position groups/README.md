@@ -5,20 +5,20 @@
 
 ### Outputs
 
- - **Market Fits**
-   - summarized in [tables](./tables), including fit parameters and bounds
-     - also shown [below](#market-fit-tables)
-   - graphs show fit for [second contract](./graphs/Second%20Contract%20Fits) and [max contract](./graphs/Max%20Contract%20Fits)
- - **[Market Graphs](./graphs/Market%20Explore)**
-   - *selection of players labelled*
-   - max contract, second contract vs wAVpG
-   - second contract - rookie contract vs wAVpG
- - **Draft Fits**
-   - wAVpG vs draft pick for each position
-   - [graphs](/graphs/Draft%20Performance%20fits)
+ - **[Webpage](https://nbpub.github.io/nfl_draft_vs_market/)**
+   - scroller story about how the surplus analysis comes together
  - **Surplus Analysis**
    - [position grids](/graphs/Draft%20Surplus%20Position%20Grids)
    - [position comparisons](/graphs/Draft%20Surplus%20Position%20Comparisons)
+   - graphs show fit for [second contract](./graphs/Second%20Contract%20Fits) and [max contract](./graphs/Max%20Contract%20Fits)
+ - **Draft Fits**
+   - [wAVpG vs draft pick](/graphs/Draft%20Performance%20fits) for each position
+ - **Market Fits**
+   - summarized in [tables](./tables), including fit parameters and bounds
+     - also shown [below](#market-fit-tables)
+ - **[Market Graphs](./graphs/Market%20Explore)**
+   - [contracts vs wAVpG](/graphs/Market%20Explore/position%20second%2C%20max%2C%20delta)
+   - [delta vs draft round](/graphs/Market%20Explore/delta%20vs%20draft%20rnd)
 
 ### Process
 
@@ -51,18 +51,20 @@
    - calculated using both second contract and max contract market rate fits 
  - also plotted surplus value against performance (wAVpG)
  
-#### [Notebook 1](./market%20based%20positions.ipynb)
- - data import, cleaning, joining, market fits and exploration
+### Code
  - code copied over, should work but not checked
  - detailed process, at least one example for graphs and fits
+ 
+#### [Notebook 1](./market%20based%20positions.ipynb)
+ - data import, cleaning, joining, market fits and exploration
+
  
 #### [Notebook 2](./market%20based%20positions_2.ipynb)
  - draft performance fits, surplus analysis, more graphs
- - code copied over, should work but not checked
- - detailed process, at least one example for graphs and fits
+ - excess graphs shown in notebook make size bulky, may update later
+
  
- 
-### Market Fit Tables 
+## Market Fit Tables 
 
 [CSV files](/tables)
 

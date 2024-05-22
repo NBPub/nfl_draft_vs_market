@@ -16,7 +16,7 @@ a {color:#ffe019;}
   height: 100%;
   font-family: 'Quicksand', sans-serif;
   line-height: 1.5;
-  word-spacing: 4px;
+  word-spacing: 2px;
   letter-spacing: 1px;
 }	
 	
@@ -97,14 +97,15 @@ a {color:#ffe019;}
   </head>
   <body>
 	<div class="wrapper">
+	  <span style="color:#ffe019; background-color:blueviolet; float:left; padding:2px 5px;">page best viewed in portrait orientation</span>
 	  <span style="background-color:blueviolet; float:right; padding:2px 5px;">
 	    <a href="https://www.pro-football-reference.com/" alt="PFR" target="_blank">draft data as of 2023</a> | 
 		<a href="https://overthecap.com/" alt="OTC" target="_blank">market data as of 2024 May</a>
 	  </span>
 	  <div class="fixed-bg bg-0">
-	    <h1 style="color:purple;">
+	    <h1 style="color:darkviolet;">
 		  Draft Surplus Analysis 
-		  <a href="https://github.com/NBPub/nfl_draft_vs_market" style="text-decoration:none; font-size:0.7em;">🔗</a><br><br>
+		  <a href="https://github.com/NBPub/nfl_draft_vs_market/tree/main/market%20based%20position%20groups#market-based-position-labels" style="text-decoration:none; font-size:0.7em;">🔗</a><br><br>
 		  Resources, Methodology via iDL example<br>
 		  Position comparison: iDL, EDGE, Tackle
 		</h1>  
@@ -138,7 +139,7 @@ a {color:#ffe019;}
 		<div class="scroll-bg">
 		  <h3>
 		    4 | Draft Performance Fit (c)<br><br>
-		    Gamma GLM was chosen for simplicity, though the 3d polynomial fit had less error. Along with the curve, the players with the highest positive and negative residuals are highlighted. Expected performance and salary cap vs draft pick has now been established!
+		    <a href='https://www.statsmodels.org/devel/generated/statsmodels.genmod.families.family.Gamma.html#statsmodels.genmod.families.family.Gamma'>Gamma</a> <a href='https://www.statsmodels.org/devel/generated/statsmodels.genmod.generalized_linear_model.GLM.html#statsmodels.genmod.generalized_linear_model.GLM'>GLM</a> was chosen for simplicity, though the <a href='https://numpy.org/doc/stable/reference/generated/numpy.polyfit.html'>3d polynomial fit</a> had less error. Along with the curve, the players with the highest positive and negative residuals are highlighted. Expected performance and salary cap vs draft pick has now been established!
 		  </h3>
 		</div>
 		<div class="fixed-bg bg-4"></div>
@@ -170,7 +171,7 @@ a {color:#ffe019;}
 		<div class="scroll-bg">
 		  <h3>
 		    8 | Market Performance Fit (b)<br><br>
-		    The salary cap minimum was increased to the 88th percentile (6.8% cap) and the final two fit choices are shown. Note that 'Splines' is a smoothed interpolation and included for reference.<br><br>Both fits are adequate for the chosen region, but their extrapolations do not capture the bottom of the market. Robust Least Squares fits were used for all market data.
+		    The salary cap minimum was increased to the 88th percentile (6.8% cap) and the final two fit choices are shown. Note that 'Splines' is a smoothed interpolation and included for reference.<br><br>Both fits are adequate for the chosen region, but their extrapolations do not capture the bottom of the market. <a href='https://www.statsmodels.org/devel/generated/statsmodels.robust.robust_linear_model.RLM.html#statsmodels.robust.robust_linear_model.RLM'>Robust Linear Models</a> were used for all market data.
 		  </h3>
 		</div>
 		<div class="fixed-bg bg-8"></div>
@@ -178,7 +179,7 @@ a {color:#ffe019;}
 		<div class="scroll-bg">
 		  <h3>
 		    9 | Final Curve Fits<br><br>
-		    In summary, performance was fit against draft pick and veteran market rate. For a given performance, rookie cost can be estimated by matching it to a draft pick, market cost can be estimated with the market rate fit, and the difference between the two is the draft surplus value.<br><br>Gamma GLM or 3d polynomials were used for all draft data.
+		    In summary, performance was related to draft pick and veteran market rate. For a given performance, rookie cost can be estimated by matching it to a draft pick, veteran cost can be estimated with the market rate fit, and the difference between the two is the draft surplus value.<br><br>Gamma GLM or 3d polynomials were used for all draft data.
 		  </h3>
 		</div>
 		<div class="fixed-bg bg-9"></div>
