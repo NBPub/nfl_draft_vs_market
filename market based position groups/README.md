@@ -13,6 +13,12 @@
    - *selection of players labelled*
    - max contract, second contract vs wAVpG
    - second contract - rookie contract vs wAVpG
+ - **Draft Fits**
+   - wAVpG vs draft pick for each position
+   - [graphs](/graphs/Draft%20Performance%20fits)
+ - **Surplus Analysis**
+   - [position grids](/graphs/Draft%20Surplus%20Position%20Grids)
+   - [position comparisons](/graphs/Draft%20Surplus%20Position%20Comparisons)
 
 ### Process
 
@@ -32,15 +38,35 @@
    - [robust linear model](https://www.statsmodels.org/dev/generated/statsmodels.robust.robust_linear_model.RLM.html#statsmodels.robust.robust_linear_model.RLM) fit to market data
      - compared to polynomial fits and smoothed spline interpolations. fit seemed ok and simple linear relationship more useful than minimizing error.
    - [graphs](./graphs) and [tables](./tables) generated
+   
+#### Draft Fits
+ - considered each position independently. wAVpG vs draft pick
+ - Generalized Linear Model (gamma) or 3d polynomial used for all positions
  
-#### [Notebook](./market%20based%20positions.ipynb)
+#### Surplus Value
+ - rookie contracts are fixed cost vs draft pick, and expected performance vs pick established
+ - equivalent market rate for draft pick determined by expected performance
+ - difference in market rate and rookie cost = **surplus value**
+   - overlap regions marked on each graph
+   - calculated using both second contract and max contract market rate fits 
+ - also plotted surplus value against performance (wAVpG)
+ 
+#### [Notebook 1](./market%20based%20positions.ipynb)
+ - data import, cleaning, joining, market fits and exploration
+ - code copied over, should work but not checked
+ - detailed process, at least one example for graphs and fits
+ 
+#### [Notebook 2](./market%20based%20positions_2.ipynb)
+ - draft performance fits, surplus analysis, more graphs
  - code copied over, should work but not checked
  - detailed process, at least one example for graphs and fits
  
  
 ### Market Fit Tables 
 
-<details><summary>Second Contract</summary>
+[CSV files](/tables)
+
+ - Second Contract
 
 |                   | WR                               | CB                         | iDL                             | LB                            | EDGE                        | S                           | RB                          | G                            | T                           | TE                       | QB                       | C                           |
 |:------------------|:---------------------------------|:---------------------------|:--------------------------------|:------------------------------|:----------------------------|:----------------------------|:----------------------------|:-----------------------------|:----------------------------|:-------------------------|:-------------------------|:----------------------------|
@@ -58,10 +84,7 @@
 | value_contract    | JuJu Smith-Schuster, 4.4% (2021) | Marcus Peters, 7.4% (2019) | Jurrell Casey, 6.8% (2014)      | Germaine Pratt, 3.0% (2023)   | Cameron Jordan, 7.7% (2015) | Justin Simmons, 5.8% (2020) | Saquon Barkley, 4.5% (2023) | Larry Warford, 5.1% (2017)   | Lane Johnson, 7.2% (2016)   | Eric Ebron, 3.7% (2018)  | Cam Newton, 14.5% (2015) | Ben Jones, 2.8% (2016)      |
 | luxury_contract   | Terry McLaurin, 11.1% (2022)     | Josh Norman, 9.7% (2016)   | Christian Wilkins, 10.8% (2024) | Foyesade Oluokun, 7.2% (2022) | Rashan Gary, 10.7% (2023)   | Derwin James, 9.1% (2022)   | David Johnson, 7.3% (2018)  | Chris Lindstrom, 9.1% (2023) | Laremy Tunsil, 11.1% (2023) | Jonnu Smith, 6.8% (2021) | Joe Burrow, 24.5% (2023) | Brandon Linder, 6.2% (2017) |
 
-</details>
-
-
-<details><summary>Max Contract</summary>
+ - Max Contract
 
 |                   | WR                            | CB                             | iDL                       | LB                            | EDGE                        | S                           | RB                         | G                            | T                           | TE                       | QB                           | C                             |
 |:------------------|:------------------------------|:-------------------------------|:--------------------------|:------------------------------|:----------------------------|:----------------------------|:---------------------------|:-----------------------------|:----------------------------|:-------------------------|:-----------------------------|:------------------------------|
@@ -79,7 +102,7 @@
 | value_contract    | Will Fuller, 5.8% (2021)      | Taron Johnson, 4.4% (2021)     | Dontari Poe, 5.3% (2018)  | Dre Greenlaw, 3.9% (2022)     | Myles Garrett, 12.6% (2020) | Kenny Vaccaro, 3.2% (2019)  | D'Andre Swift, 3.1% (2024) | Clint Boling, 3.6% (2015)    | Daryl Williams, 4.4% (2021) | Eric Ebron, 3.7% (2018)  | Cam Newton, 14.5% (2015)     | Travis Frederick, 6.1% (2016) |
 | luxury_contract   | DeAndre Hopkins, 13.7% (2020) | Trumaine Johnson, 10.0% (2017) | Chris Jones, 12.4% (2024) | Foyesade Oluokun, 7.2% (2022) | Rashan Gary, 10.7% (2023)   | Harrison Smith, 8.8% (2021) | David Johnson, 7.3% (2018) | Brandon Scherff, 9.9% (2021) | Laremy Tunsil, 11.1% (2023) | Jonnu Smith, 6.8% (2021) | Russell Wilson, 23.5% (2022) | Brandon Linder, 6.2% (2017)   |
 
-</details>
+
  
  
  

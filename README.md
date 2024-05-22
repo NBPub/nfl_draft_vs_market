@@ -3,8 +3,7 @@
 NFL position-specific performance, market rate, and draft value from 2011 to 2023, collected and analyzed using Python. 
 This repository demonstrates data import, cleaning, and analysis via Jupyter Notebooks.
 
-| [Credit](#Previous-Work) | [Methods](/#Draft-Surplus-Analysis) | [Output](/#Position-Comparisons) | [Notebooks](/#Notebook-Descriptions) |
-
+| [Credit](#Previous-Work) | [Methods](/#Draft-Surplus-Analysis) | [Output](/#Position-Comparisons) | [Notebooks](/#Notebook-Descriptions) | **[Market Based Positions](/market%20based%20position%20groups)** |
 ----
 
 ### Contents
@@ -12,6 +11,8 @@ This repository demonstrates data import, cleaning, and analysis via Jupyter Not
  - [Analyses](/#Draft-Surplus-Analysis)
    - [Graphs](/#Position-Comparisons)
  - [Notebooks](/#Notebook-Descriptions)
+ - **[Market Based Positions](/market%20based%20position%20groups)**
+   - updated work to address issues mentioned below
  
 ## Acknowledgements
 
