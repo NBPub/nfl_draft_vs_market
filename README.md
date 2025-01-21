@@ -3,7 +3,7 @@
 NFL position-specific performance, market rate, and draft value from 2011 to 2023, collected and analyzed using Python. 
 This repository demonstrates data import, cleaning, and analysis via Jupyter Notebooks.
 
-| [Credit](#Previous-Work) | [Methods](/#Draft-Surplus-Analysis) | [Output](/#Position-Comparisons) | [Notebooks](/#Notebook-Descriptions) | **[Market Based Positions](/market%20based%20position%20groups)** |
+| [Credit](#Previous-Work) | [Methods](/#methods) | [Output](/docs#draft-surplus-position-comparisons) | [Notebooks](/#notebook-descriptions) | **[Market Based Positions](/market%20based%20position%20groups#market-based-position-labels)** |
 ----
 
 ### Contents
@@ -66,7 +66,9 @@ Methods follow the previous work listed below.
 
 *[K. Cole, 2023](https://unexpectedpoints.substack.com/p/what-analytical-draft-value-curves), summarizing findings from [The Loser's Curse](https://faculty.wharton.upenn.edu/wp-content/uploads/2013/08/massey---thaler---losers-curse---management-science-july-2013.pdf)*
 
-<details><summary>Methods</summary>
+### Methods
+
+<details><summary>expand</summary>
 
   - Data | *[processed data](/data)*
     - **Performance** measured by PFR's AV divided by games played. `AVpG`
@@ -97,7 +99,7 @@ Methods follow the previous work listed below.
     - Dropped players
 	  - Performance, `AVpG`, was sourced from the PFR draft data. Undrafted players, players drafted prior to 2011, and players with inconsistent positions from the OTC market data were dropped.
     - Position labels | *[Position Group Checks](/comparison%20graphs/position%20group%20checks)*
-	  - *update* **addressed issue [here](/market%20based%20position%20groups/market%20based%20positions.ipynb), see [README](/market%20based%20position%20groups) for details**
+	  - *update* **addressed issue [here](/market%20based%20position%20groups/market%20based%20positions.ipynb), see [README](/market%20based%20position%20groups#market-based-position-labels) for details**
 	  - PFR position labels are broader and less consistent than OTC. Some cleaning efforts and groupings were employed. Others were skipped.
 	    - OTC positions used to classify "OL" from PFR. Not all "OL" were found, resulting in more dropped players for iOL and OT analysis.
 		- To ignore "DB" from PFR, all CB and S were grouped. Is it fair to group these market rates?
@@ -117,39 +119,24 @@ Methods follow the previous work listed below.
 	  - significant data points may be missing from market rate fits, see dropped players
 	    - number of "top contracts" quickly selected
 </details>
+
+### [Position Comparisons](/docs#Draft-Surplus-Position-Comparisons)
+
+*separate page shows selected graphs and links to various collections of generated graphs*
  
-### Position Comparisons
-
-<details><summary>All positions/groups except QB, ST</summary>
-
-![Kitchen Sink](/comparison%20graphs/position-compare_DB,WR,TE,RB,OT,iOL.png "All positions analyzed, except QB and ST")
-
-</details>
-
-<details><summary>OT vs iOL example</summary>
-
-![OT vs iOL overall](/comparison%20graphs/position-compare_OT,iOL.png)
-![OT vs iOL market premium](/comparison%20graphs/market%20premium%20comparisons/market-premium-compare_OT,iOL.png)
-![OT vs iOL draft fit](/comparison%20graphs/draft%20fit%20comparisons/draft-fit-compare-box_OT,iOL.png)
-
-</details>
-
-<details><summary>Position Label Market Checks</summary>
-
-![DB Pairing](/comparison%20graphs/position%20group%20checks/market_compare-OTC_CB-S.png "Were CB and S safe to group into DB?")
-
-![OL](/comparison%20graphs/position%20group%20checks/market_compare-OTC_G-T-C.png "Should T/G/C be treated separately?")
-
-![skipped D](/comparison%20graphs/position%20group%20checks/market_compare-OTC_EDGE-IDL-LB_varied_y.png "Skipped defense, market rates imply thoughtful cleaning is worthwhile")
-
-</details>
 
 ----
  
 ## Notebook Descriptions
- - [Import](/Data%20Import.ipynb) | *[description](/#Import)*
- - [Analysis](/Data%20Analysis.ipynb) | *[description](/#Analysis)*
- - [Market Only](/other_Market%20Analysis.ipynb) | *[description](/#Market-Data-Only)*
+
+*notebooks linked, then summarized in sections below*
+
+ - [Import](/Data%20Import.ipynb)
+ - [Analysis](/Data%20Analysis.ipynb) 
+ - [Market Only](/other_Market%20Analysis.ipynb)
+ - *Market Based Position Labels [refer to other page](/market%20based%20position%20groups#market-based-position-labels)*
+   - [Notebook 1](/market%20based%20position%20groups#notebook-1)
+   - [Notebook 2](/market%20based%20position%20groups#notebook-2)
 
 ### Import
  - data read and rudimentarily cleaned from sources

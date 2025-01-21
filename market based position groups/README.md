@@ -3,6 +3,9 @@
 **This work was done to address the Position Labels issue mentioned on the main [document](/README.md#draft-surplus-analysis).** 
 **Using position labels from OTC provides more accurate and finer position labels, enabling better market fits and draft comparisons.**
 
+ - [Market Fit Tables](/#market-fit-tables)
+ - [Position Comparison Graph Checks](/#position-comparison-graphs)
+
 ### Outputs
 
  - **[Webpage](https://nbpub.github.io/nfl_draft_vs_market/)**
@@ -105,6 +108,12 @@
 | luxury_contract   | DeAndre Hopkins, 13.7% (2020) | Trumaine Johnson, 10.0% (2017) | Chris Jones, 12.4% (2024) | Foyesade Oluokun, 7.2% (2022) | Rashan Gary, 10.7% (2023)   | Harrison Smith, 8.8% (2021) | David Johnson, 7.3% (2018) | Brandon Scherff, 9.9% (2021) | Laremy Tunsil, 11.1% (2023) | Jonnu Smith, 6.8% (2021) | Russell Wilson, 23.5% (2022) | Brandon Linder, 6.2% (2017)   |
 
 
- 
+## Postion Comparison Graphs
+
+![DB Pairing](/comparison%20graphs/position%20group%20checks/market_compare-OTC_CB-S.png "Were CB and S safe to group into DB?")
+
+![OL](/comparison%20graphs/position%20group%20checks/market_compare-OTC_G-T-C.png "Should T/G/C be treated separately?")
+
+![skipped D](/comparison%20graphs/position%20group%20checks/market_compare-OTC_EDGE-IDL-LB_varied_y.png "Skipped defense, market rates imply thoughtful cleaning is worthwhile") 
  
  

@@ -15,13 +15,11 @@ images = list(Path(page_folder).glob('./*.png'))
 images = [int(val.stem) for val in images]
 images.remove(0)
 images.sort()
-images = [f'{repo_url}/{val}.png' for val in images]
+images = [f'{repo_url}{val}.png' for val in images]
 
 with open(Path('section_texts.json'), 'r') as f:
     section_texts = json.load(f)
     
-    
-
 if not len(section_texts) == len(images):
     exit
     

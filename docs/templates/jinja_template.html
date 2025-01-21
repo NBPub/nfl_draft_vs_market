@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Draft Surplus</title>
+	<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/NBPub/TitanUp/main/images/favicon.png"/>
+	<style>
+html,body {
+  height: 100%;
+}
+
+a {color:#ffe019;}
+
+.wrapper {
+  height: 100%;
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.5;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+}	
+	
+.fixed-bg {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  height: 100%; 
+  width: 100%;
+  color: black;
+  text-align: center;
+  display: table;
+}
+
+.fixed-bg h1 {
+  display: table-cell;
+  vertical-align: middle;
+  color: black;
+}
+
+.scroll-bg {
+  background-color: #0f0f0a;
+  padding: 10px 70px;
+  color: #ffe019;
+}
+
+.bg-0 {background-image: url('https://raw.githubusercontent.com/NBPub/nfl_draft_vs_market/main/docs/page%20images/0.png');} 
+
+{% for p in image_urls %}
+  .bg-{{ loop.index }} {background-image: url('{{ p|string }}');}
+{% endfor %}
+	</style>
+  </head>
+  <body>
+	<div class="wrapper">
+	  <span style="color:#ffe019; background-color:blueviolet; float:left; padding:2px 5px;">page best viewed in portrait orientation</span>
+	  <span style="background-color:blueviolet; float:right; padding:2px 5px;">
+	    <a href="https://www.pro-football-reference.com/" alt="PFR" target="_blank">draft data as of 2023</a> | 
+		<a href="https://overthecap.com/" alt="OTC" target="_blank">market data as of 2024 May</a>
+	  </span>
+	  <div class="fixed-bg bg-0">
+	    <h1 style="color:darkviolet;"><span style="background-color:#ffe019;">
+		  Draft Surplus Analysis 
+		  <a href="https://github.com/NBPub/nfl_draft_vs_market/tree/main/market%20based%20position%20groups#market-based-position-labels" style="text-decoration:none; font-size:0.7em;">🔗</a><br><br>
+		  Resources, Methodology via iDL example<br>
+		  Position comparison: iDL, EDGE, Tackle
+		</span></h1>  
+	  </div>
+	  
+	  {% for title,text in section_texts.items() %}
+		<div class="scroll-bg">
+		  <h3>
+		    {{ loop.index }} | {{ title }}<br><br>
+		    {{ text|safe }}
+		  </h3>
+		</div>
+		<div class="fixed-bg bg-{{ loop.index }}"></div>
+	  {% endfor %}
+	  
+	  <div class="scroll-bg"><h3>Thanks for taking the time to scroll through the story. Check out the links below for links to the data, graphs, and code.</h3></div>
+	  <div class="scroll-bg" style="padding: 0px 0px 200px 0px; display:grid;">
+	    <a style="margin:10px; color:blueviolet;" href="https://github.com/NBPub/nfl_draft_vs_market/tree/main/market%20based%20position%20groups#market-based-position-labels">Market Based Position Groups Repository</a>
+	    <a style="margin:10px; color:blueviolet;" href="https://github.com/NBPub/nfl_draft_vs_market/tree/main/market%20based%20position%20groups/data">Processed Data</a>
+		<a style="margin:10px; color:blueviolet;" href="https://github.com/NBPub/nfl_draft_vs_market/tree/main/market%20based%20position%20groups#market-fit-tables">Market Fit Parameters</a>
+		<a style="margin:10px; color:blueviolet;" href="https://github.com/NBPub/nfl_draft_vs_market/tree/main/market%20based%20position%20groups/graphs/Second%20Contract%20fits">Second Contract Market Fit Graphs</a>
+		<a style="margin:10px; color:blueviolet;" href="https://github.com/NBPub/nfl_draft_vs_market/tree/main/market%20based%20position%20groups/graphs/Max%20Contract%20fits">Max Contract Market Fit Graphs</a>
+		<a style="margin:10px; color:blueviolet;" href="https://github.com/NBPub/nfl_draft_vs_market/tree/main/market%20based%20position%20groups/graphs/Draft%20Performance%20fits">Draft Fit Graphs</a>
+		<a style="margin:10px; color:blueviolet;" href="https://github.com/NBPub/nfl_draft_vs_market/tree/main/market%20based%20position%20groups/graphs/Draft%20Surplus%20Position%20Grids">Draft Surplus - Indivdual Position Grids</a>
+		<a style="margin:10px; color:blueviolet;" href="https://github.com/NBPub/nfl_draft_vs_market/tree/main/market%20based%20position%20groups/graphs/Draft%20Surplus%20Position%20Comparisons">Draft Surplus - Position Comparisons</a>
+		<a style="margin:10px; color:blueviolet;" href="https://github.com/NBPub/nfl_draft_vs_market/tree/main/market%20based%20position%20groups/graphs/Market%20Explore">Other Market Graphs</a>
+		<a style="margin:10px; color:blueviolet;" href="https://github.com/NBPub/nfl_draft_vs_market/blob/main/market%20based%20position%20groups/market%20based%20positions.ipynb">Notebook 1 - data import, cleaning, grouping. market fits.</a>
+		<a style="margin:10px; color:blueviolet;" href="https://github.com/NBPub/nfl_draft_vs_market/blob/main/market%20based%20position%20groups/market%20based%20positions_2.ipynb">Notebook 2 - draft performance fits, surplus analysis, bonus content</a>
+	  </div>
+	</div>
+  </body>
+</html>
