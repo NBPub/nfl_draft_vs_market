@@ -1,32 +1,35 @@
-## Market Based Position Labels
+# Market Based Position Labels
 
 **This work was done to address the Position Labels issue mentioned on the main [document](/README.md#draft-surplus-analysis).** 
 **Using position labels from OTC provides more accurate and finer position labels, enabling better market fits and draft comparisons.**
 
- - [Market Fit Tables](/#market-fit-tables)
- - [Position Comparison Graph Checks](/#position-comparison-graphs)
+ - [Outputs](/market%20based%20position%20groups#outputs)
+ - [Outputs](/market%20based%20position%20groups#process)
+ - [Outputs](/market%20based%20position%20groups#code)
+ - [Market Fit Tables](/market%20based%20position%20groups#market-fit-tables)
+ - [Position Comparison Graph Checks](/market%20based%20position%20groups#position-comparison-graphs)
 
-### Outputs
+## Outputs
 
  - **[Webpage](https://nbpub.github.io/nfl_draft_vs_market/)**
    - scroller story about how the surplus analysis comes together
  - **Surplus Analysis**
-   - [position grids](/graphs/Draft%20Surplus%20Position%20Grids)
-   - [position comparisons](/graphs/Draft%20Surplus%20Position%20Comparisons)
-   - graphs show fit for [second contract](./graphs/Second%20Contract%20Fits) and [max contract](./graphs/Max%20Contract%20Fits)
+   - [position grids](/market%20based%20position%20groups/graphs/Draft%20Surplus%20Position%20Grids)
+   - [position comparisons](/market%20based%20position%20groups/graphs/Draft%20Surplus%20Position%20Comparisons)
+   - graphs show fit for [second contract](/market%20based%20position%20groups/graphs/Second%20Contract%20Fits) and [max contract](/market%20based%20position%20groups/graphs/Max%20Contract%20Fits)
  - **Draft Fits**
-   - [wAVpG vs draft pick](/graphs/Draft%20Performance%20fits) for each position
+   - [wAVpG vs draft pick](/market%20based%20position%20groups/graphs/Draft%20Performance%20fits) for each position
  - **Market Fits**
-   - summarized in [tables](./tables), including fit parameters and bounds
-     - also shown [below](#market-fit-tables)
- - **[Market Graphs](./graphs/Market%20Explore)**
-   - [contracts vs wAVpG](/graphs/Market%20Explore/position%20second%2C%20max%2C%20delta)
-   - [delta vs draft round](/graphs/Market%20Explore/delta%20vs%20draft%20rnd)
+   - summarized in [tables](/market%20based%20position%20groups/tables), including fit parameters and bounds
+     - also shown [below](/market%20based%20position%20groups#market-fit-tables)
+ - **[Market Graphs](/market%20based%20position%20groups/graphs/Market%20Explore)**
+   - [contracts vs wAVpG](/market%20based%20position%20groups/graphs/Market%20Explore/position%20second%2C%20max%2C%20delta)
+   - [delta vs draft round](/market%20based%20position%20groups/graphs/Market%20Explore/delta%20vs%20draft%20rnd)
 
-### Process
+## Process
 
-#### Data Collection
- - used draft [data](/data/draft_2011-2023.csv), processed as before adding "wAVpG" performance metric
+### Data Collection
+ - used draft [data](/market%20based%20position%20groups/data/draft_2011-2023.csv), processed as before adding "wAVpG" performance metric
  - gathered contract history data from OTC for a number of positions. removed data from before 2015 (first year players from 2011 draft eligible for next contract)
    - ex: `https://overthecap.com/contract-history/wide-receiver`  
    - APY as % Cap at Signing used to value contracts, `% Cap`
@@ -35,18 +38,18 @@
    - player position from market data used for grouping, if multiple took most recent or most common position
      - cleaning process imperfect, examples: `Kelvin Benjamin (TE)` *should be WR?*, `Chris Jones (iDL)` *stats/contracts mixed for players* 
  
-#### Market Fits
+### Market Fits
  - considered each position independently, considered both second contract and max contract.
    - position specific cutoff percentile used to establish lower bound for "premium market" contracts
    - [robust linear model](https://www.statsmodels.org/dev/generated/statsmodels.robust.robust_linear_model.RLM.html#statsmodels.robust.robust_linear_model.RLM) fit to market data
      - compared to polynomial fits and smoothed spline interpolations. fit seemed ok and simple linear relationship more useful than minimizing error.
-   - [graphs](./graphs) and [tables](./tables) generated
+   - [graphs](/market%20based%20position%20groups/graphs) and [tables](/market%20based%20position%20groups/tables) generated
    
-#### Draft Fits
+### Draft Fits
  - considered each position independently. wAVpG vs draft pick
  - Generalized Linear Model (gamma) or 3d polynomial used for all positions
  
-#### Surplus Value
+### Surplus Value
  - rookie contracts are fixed cost vs draft pick, and expected performance vs pick established
  - equivalent market rate for draft pick determined by expected performance
  - difference in market rate and rookie cost = **surplus value**
@@ -54,22 +57,22 @@
    - calculated using both second contract and max contract market rate fits 
  - also plotted surplus value against performance (wAVpG)
  
-### Code
+## Code
  - code copied over, should work but not checked
  - detailed process, at least one example for graphs and fits
  
-#### [Notebook 1](./market%20based%20positions.ipynb)
+### [Notebook 1](/market%20based%20position%20groups/market%20based%20positions.ipynb)
  - data import, cleaning, joining, market fits and exploration
 
  
-#### [Notebook 2](./market%20based%20positions_2.ipynb)
+### [Notebook 2](/market%20based%20position%20groups/market%20based%20positions_2.ipynb)
  - draft performance fits, surplus analysis, more graphs
  - excess graphs shown in notebook make size bulky, may update later
 
  
 ## Market Fit Tables 
 
-[CSV files](/tables)
+[CSV files](/market%20based%20position%20groups/tables)
 
  - Second Contract
 
