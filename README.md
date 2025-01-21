@@ -11,8 +11,9 @@ This repository demonstrates data import, cleaning, and analysis via Jupyter Not
  - [Analyses](/#Draft-Surplus-Analysis)
    - [Graphs](/docs#draft-surplus-position-comparisons)
  - [Notebooks](/#Notebook-Descriptions)
+   - [Python Environment](#python-packages)
  - **[Market Based Positions](/market%20based%20position%20groups)**
-   - updated work to address issues mentioned below
+   - updated work to address issues mentioned [below(/#methods)
  
 ## Acknowledgements
 
@@ -46,16 +47,6 @@ Methods follow the previous work listed below.
    - 2023 [contracts](https://overthecap.com/contracts)
    - player, position, avg $/year
    
-#### Python Packages
-*Install these packages in your Python environment to run the [notebooks](/#Notebook-Descriptions)*
-  - [pandas](https://pandas.pydata.org/)
-  - [numpy](https://numpy.org/)
-  - [scipy](https://scipy.org/)
-  - [statsmodels](https://www.statsmodels.org/)
-  - [matplotlib](https://matplotlib.org/)
-  - [seaborn](https://seaborn.pydata.org/)
-
-
 ----
  
 ## Draft Surplus Analysis
@@ -104,7 +95,8 @@ Methods follow the previous work listed below.
 	    - OTC positions used to classify "OL" from PFR. Not all "OL" were found, resulting in more dropped players for iOL and OT analysis.
 		- To ignore "DB" from PFR, all CB and S were grouped. Is it fair to group these market rates?
 		- Similarly, is it fair to group G and C into iOL?
-		- Given market differences between EDGE/OLB vs ILB vs IDL, these positions were skipped.
+		- Given market differences between EDGE/OLB vs ILB vs IDL, these positions were initally skipped.
+		  - see linked notebook above for resolution methods
 	- Definitions
 	  - Cost
 	    - Rookie costs only for their drafted year
@@ -150,3 +142,12 @@ Methods follow the previous work listed below.
 ### Market Data Only
  - considers OTC position only (see Position labels discussion above)
  - combines position with L/R, like OT, OG
+ 
+#### Python Packages
+*Install these packages in your Python environment to run the [notebooks](/#Notebook-Descriptions)*
+  - [pandas](https://pandas.pydata.org/)
+  - [numpy](https://numpy.org/)
+  - [scipy](https://scipy.org/)
+  - [statsmodels](https://www.statsmodels.org/)
+  - [matplotlib](https://matplotlib.org/)
+  - [seaborn](https://seaborn.pydata.org/)

@@ -68,6 +68,14 @@
 ### [Notebook 2](/market%20based%20position%20groups/market%20based%20positions_2.ipynb)
  - draft performance fits, surplus analysis, more graphs
  - excess graphs shown in notebook make size bulky, may update later
+ 
+#### Python Packages
+  - [pandas](https://pandas.pydata.org/)
+  - [numpy](https://numpy.org/)
+  - [scipy](https://scipy.org/)
+  - [statsmodels](https://www.statsmodels.org/)
+  - [matplotlib](https://matplotlib.org/)
+  - [seaborn](https://seaborn.pydata.org/)
 
  
 ## Market Fit Tables 
