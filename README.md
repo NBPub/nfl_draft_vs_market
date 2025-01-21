@@ -18,7 +18,7 @@ Outputs from the second effort are referred to as using "market-based position g
  - [Notebooks](/#Notebook-Descriptions)
    - [Python Environment](#python-packages)
  - **[Market Based Positions](/market%20based%20position%20groups)**
-   - updated work to address issues mentioned [below(/#methods)
+   - updated work to address issues mentioned [below](/#methods)
  
 ## Acknowledgements
 
