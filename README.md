@@ -3,6 +3,11 @@
 NFL position-specific performance, market rate, and draft value from 2011 to 2023, collected and analyzed using Python. 
 This repository demonstrates data import, cleaning, and analysis via Jupyter Notebooks.
 
+Two efforts for draft surplus analysis are captured in this repository. 
+More will be presented from the second effort, where [player position labels were optimized](/market%20based%20position%20groups)
+using [OTC](https://overthecap.com/) instead of [PFR](https://www.pro-football-reference.com/). 
+Outputs from the second effort are referred to as using "market-based position groups".
+
 | [Presentation Page](https://nbpub.github.io/nfl_draft_vs_market/) | [Credit](#Previous-Work) | [Methods](/#methods) | [Output](/docs#draft-surplus-position-comparisons) | [Notebooks](/#notebook-descriptions) | **[Market Based Positions](/market%20based%20position%20groups#market-based-position-labels)** |
 ----
 
@@ -151,3 +156,4 @@ Methods follow the previous work listed below.
   - [statsmodels](https://www.statsmodels.org/)
   - [matplotlib](https://matplotlib.org/)
   - [seaborn](https://seaborn.pydata.org/)
+  - [PyArrow](https://arrow.apache.org/docs/python/index.html)

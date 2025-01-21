@@ -9,9 +9,10 @@
      - [Full Analysis Graph Grids](/docs#full-grids)
 	 - [Comparison Graphs Only](/docs#individual-comparison-graphs)
 	 
-See [analysis notebook](https://github.com/NBPub/nfl_draft_vs_market/blob/main/Data%20Analysis.ipynb) to generate other comparisons. 
 All previously generated position comparison graphs are stored [here](/comparison%20graphs). Position specific graphs are stored [here](/position%20graphs). 
-Even more graph collections are linked below.
+These graphs were from the first effort, using PFR's player position labels with some manual cleaning efforts.
+ 
+Even more graph collections are linked below, and are generated from the next, more robust method of using OTC's player position labels.
 
    - Position Comparisons
      - [contract change vs draft round](/market%20based%20position%20groups/graphs/Market%20Explore/delta%20vs%20draft%20rnd)
@@ -33,7 +34,9 @@ Even more graph collections are linked below.
 	   - series of graphs showing draft and market fits, then surplus vs draft pick and performance.
 	   - market fit using max and second veteran contracts
 	 
-
+See [analysis notebook](https://github.com/NBPub/nfl_draft_vs_market/blob/main/Data%20Analysis.ipynb) 
+and the [second market-based positions notebook](/market%20based%20position%20groups/market%20based%20positions_2.ipynb) 
+to generate more comparisons. 
 
 ### OT vs iOL
 

@@ -4,10 +4,18 @@
 **Using position labels from OTC provides more accurate and finer position labels, enabling better market fits and draft comparisons.**
 
  - [Outputs](/market%20based%20position%20groups#outputs)
- - [Outputs](/market%20based%20position%20groups#process)
- - [Outputs](/market%20based%20position%20groups#code)
+   - presentation page, surplus analyses, draft and market fits, market exploration
+ - [Process](/market%20based%20position%20groups#process)
+   - data collection, position cleaning, details for each output listed above
+ - [Code](/market%20based%20position%20groups#code)
+   - brief descriptions of two notebooks and list of used python packages
  - [Market Fit Tables](/market%20based%20position%20groups#market-fit-tables)
+   - parameters of market fits based on second and maximum veteran contracts, with high and low value contracts listed
  - [Position Comparison Graph Checks](/market%20based%20position%20groups#position-comparison-graphs)
+   - graphs used to evaluate position cleaning efforts
+     - DB split into CB and S
+	 - OL split into T, G, C
+	 - defensive front seven, EDGE, iDL, off-ball LB
 
 ## Outputs
 
@@ -76,6 +84,7 @@
   - [statsmodels](https://www.statsmodels.org/)
   - [matplotlib](https://matplotlib.org/)
   - [seaborn](https://seaborn.pydata.org/)
+  - [PyArrow](https://arrow.apache.org/docs/python/index.html)
 
  
 ## Market Fit Tables 
