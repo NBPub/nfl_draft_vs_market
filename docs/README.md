@@ -12,7 +12,7 @@
 All previously generated position comparison graphs are stored [here](/comparison%20graphs). Position specific graphs are stored [here](/position%20graphs). 
 These graphs were from the first effort, using PFR's player position labels with some manual cleaning efforts. The [methods](/#methods) section lists some limitations of this effort.
  
-Even more graph collections are linked below, and are generated from the next, more robust effort of using OTC's player position labels, referred to as  
+Even more graph collections are linked below, and are generated from the next, more robust effort of using OTC's player position labels, referred to as 
 [market-based position labels](/market%20based%20position%20groups#market-based-position-labels).
 
    - Position Comparisons
